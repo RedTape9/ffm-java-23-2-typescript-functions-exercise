@@ -40,7 +40,7 @@ function App() {
   function printStudentDetails(student: Student) {
     let num = 0;
     console.log(`${student.firstName} ${student.lastName} (${student.age})`);
-    num = num + student.firstName.length + student.lastName.length + 2 + 4;
+    num = num + student.firstName.length + student.lastName.length + student.age.toString().length + 4;
     console.log('='.repeat(num));
 
     const gradesString = student.grades.map(grade => grade === undefined ? '*' : grade).join(',');
